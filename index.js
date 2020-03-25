@@ -31,7 +31,7 @@ app.get('/synonyms/:word', (request, response) => {
             let words = [];
 
             synonyms.forEach(synonym => {
-                words.push(synonym.innerHTML);
+                words.push(synonym.textContent);
             });
 
             response.json(words);
