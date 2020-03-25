@@ -5,15 +5,15 @@ const PORT = process.env.PORT || 5000;
 const axios = require('axios');
 
 const jsdom = require('jsdom');
-const { JSDOM } = jsdom;
+const {JSDOM} = jsdom;
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
 
-    let allowedOrigins = ['http://127.0.0.1:3000', 'http://localhost:3000', 'https://victormt4.github.io/essay-analyzer'];
+    let allowedOrigins = ['http://127.0.0.1:3000', 'http://localhost:3000', 'https://victormt4.github.io'];
 
     let origin = req.headers.origin;
 
-    if(allowedOrigins.indexOf(origin) > -1){
+    if (allowedOrigins.indexOf(origin) > -1) {
         res.header('Access-Control-Allow-Origin', origin);
     }
 
